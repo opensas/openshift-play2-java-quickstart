@@ -10,15 +10,19 @@ Running on OpenShift
 
 Register at http://openshift.redhat.com/, and then create a raw (do-it-yourself) application:
 
-    rhc app create -a play2java -t raw-0.1
+    rhc app create -a play2java -t diy-0.1 -l yourlogin@yourmail.com
 
 Add this upstream play-example repo:
 
     cd play2java
-    git remote add upstream -m master https://github.com/opensas/play2-java-example.git
+    git remote add upstream -m master https://github.com/opensas/openshift-play2-java-quickstart.git
     git pull -s recursive -X theirs upstream master
 
 Now you should update your appName setting in project/Build.scala to match your application name.
+
+You build your application with:
+
+    play stage
 
 Then push the repo upstream:
 
