@@ -65,7 +65,7 @@ To deploy your changes to openshift just add your changes to the index, commit a
 
     git add . -A
     git commit -m "a nice message"
-    git push origin
+    git push
 
 
 Trouble shooting
