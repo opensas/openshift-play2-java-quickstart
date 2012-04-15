@@ -15,8 +15,8 @@ Register at http://openshift.redhat.com/, and then create a raw (do-it-yourself)
 Add this upstream play-example repo:
 
     cd play2java
-    git remote add upstream -m master https://github.com/opensas/openshift-play2-java-quickstart.git
-    git pull -s recursive -X theirs upstream master
+    git remote add quickstart -m master https://github.com/opensas/openshift-play2-java-quickstart.git
+    git pull -s recursive -X theirs quickstart master
 
 Now you should update your appName setting in project/Build.scala to match your application name.
 
