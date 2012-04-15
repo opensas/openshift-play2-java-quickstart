@@ -20,12 +20,9 @@ Add this upstream play-example repo:
 
 Now you should update your appName setting in project/Build.scala to match your application name.
 
-Build your application with:
+Next you'll have to build your application, commit your changes and deploy them to openshift pushing it to your remote repo (you can also do all this with the openshift_deploy script):
 
     play stage
-
-And commit your changes and deploy them to openshift pushing it to your remote repo
-
     git add .
     git commit -m "deploying new play2 java application"
     git push
@@ -61,8 +58,9 @@ It's also a good idea to create a different user with limited privileges on the 
 Updating your application
 ----------------------------
 
-To deploy your changes to openshift just add your changes to the index, commit and push:
+To deploy your changes to openshift just build your app, add your changes to the index, commit and push:
 
+    play stage
     git add . -A
     git commit -m "a nice message"
     git push
